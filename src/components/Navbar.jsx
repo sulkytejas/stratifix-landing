@@ -1,88 +1,154 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NAV_LINKS = [
-  { label: "Features", href: "#features", active: true },
-  { label: "Pricing", href: "#pricing" },
+const industries = [
+  { label: "Technology", to: "/solutions/technology" },
+  { label: "Telecommunications", to: "/solutions/telecommunications" },
+];
+const useCases = [
+  { label: "AI Sales Training", to: "/solutions/ai-sales-training" },
+  { label: "Leadership Coaching", to: "/solutions/leadership-coaching" },
+  { label: "Onboarding", to: "/solutions/onboarding" },
+  { label: "Customer Service Training", to: "/solutions/customer-service-training" },
 ];
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-6 h-16 md:h-20">
+    <header className="w-full top-0 sticky z-50 bg-[#f7f9fb] dark:bg-slate-900">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
         <Link
           to="/"
-          className="text-xl font-extrabold tracking-tighter text-primary font-headline"
+          className="text-2xl font-bold tracking-tighter text-[#001944] dark:text-white font-headline"
         >
-          Stratifix
+          Stratyfix
         </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 font-headline font-medium text-sm tracking-tight">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={
-                link.active
-                  ? "text-primary font-bold border-b-2 border-primary pb-1"
-                  : "text-slate-600 hover:text-primary transition-colors hover:bg-slate-50 rounded-lg px-3 py-2"
-              }
+        <nav className="hidden md:flex items-center gap-8 font-headline text-sm font-medium tracking-tight">
+          <Link
+            className="text-[#454652] dark:text-slate-400 hover:text-[#001944] dark:hover:text-white transition-colors"
+            to="/platform"
+          >
+            Platform
+          </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => setSolutionsOpen(true)}
+            onMouseLeave={() => setSolutionsOpen(false)}
+          >
+            <button
+              className={`flex items-center gap-1 transition-colors ${
+                solutionsOpen
+                  ? "text-[#001944] dark:text-white"
+                  : "text-[#454652] dark:text-slate-400 hover:text-[#001944] dark:hover:text-white"
+              }`}
             >
-              {link.label}
-            </a>
-          ))}
-        </div>
-
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-4">
+              Solutions
+              <span
+                className={`material-symbols-outlined text-base transition-transform ${
+                  solutionsOpen ? "rotate-180" : ""
+                }`}
+              >
+                expand_more
+              </span>
+            </button>
+            {solutionsOpen && (
+              <div className="absolute top-full left-0 pt-2">
+                <div className="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-outline-variant/20 p-8 flex gap-16 min-w-[420px]">
+                  <div>
+                    <h4 className="text-xs font-bold text-[#001944] dark:text-white uppercase tracking-wider mb-4">
+                      Industries
+                    </h4>
+                    <div className="flex flex-col gap-3">
+                      {industries.map((item) => (
+                        <Link
+                          key={item.label}
+                          to={item.to}
+                          className="text-sm text-[#454652] dark:text-slate-400 hover:text-[#001944] dark:hover:text-white transition-colors font-medium"
+                          onClick={() => setSolutionsOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-[#001944] dark:text-white uppercase tracking-wider mb-4">
+                      Use cases
+                    </h4>
+                    <div className="flex flex-col gap-3">
+                      {useCases.map((item) => (
+                        <Link
+                          key={item.label}
+                          to={item.to}
+                          className="text-sm text-[#454652] dark:text-slate-400 hover:text-[#001944] dark:hover:text-white transition-colors font-medium"
+                          onClick={() => setSolutionsOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div
+            className="relative"
+            onMouseEnter={() => setAboutOpen(true)}
+            onMouseLeave={() => setAboutOpen(false)}
+          >
+            <button
+              className={`flex items-center gap-1 transition-colors ${
+                aboutOpen
+                  ? "text-[#001944] dark:text-white"
+                  : "text-[#454652] dark:text-slate-400 hover:text-[#001944] dark:hover:text-white"
+              }`}
+            >
+              About us
+              <span
+                className={`material-symbols-outlined text-base transition-transform ${
+                  aboutOpen ? "rotate-180" : ""
+                }`}
+              >
+                expand_more
+              </span>
+            </button>
+            {aboutOpen && (
+              <div className="absolute top-full right-0 pt-2">
+                <div className="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-outline-variant/20 p-6 min-w-[200px]">
+                  <div className="flex flex-col gap-3">
+                    <Link
+                      to="/about"
+                      className="text-sm text-[#454652] dark:text-slate-400 hover:text-[#001944] dark:hover:text-white transition-colors font-medium"
+                      onClick={() => setAboutOpen(false)}
+                    >
+                      About Stratyfix
+                    </Link>
+                    <Link
+                      to="/pricing"
+                      className="text-sm text-[#454652] dark:text-slate-400 hover:text-[#001944] dark:hover:text-white transition-colors font-medium"
+                      onClick={() => setAboutOpen(false)}
+                    >
+                      Pricing
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </nav>
+        <div className="flex items-center gap-4">
           <Link
             to="/book-demo"
-            className="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all"
+            className="px-6 py-2.5 bg-primary text-white rounded-md font-semibold text-sm hover:opacity-90 active:scale-95 duration-150 transition-all"
           >
-            Book Demo
+            Get Started
           </Link>
         </div>
-
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden text-primary active:opacity-70 transition-all"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <span className="material-symbols-outlined">
-            {mobileMenuOpen ? "close" : "menu"}
-          </span>
-        </button>
       </div>
-
-      {/* Mobile Menu Dropdown */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-surface-container px-6 py-6 space-y-4">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm font-semibold font-headline text-on-surface-variant hover:text-primary transition-colors py-2"
-            >
-              {link.label}
-            </a>
-          ))}
-          <div className="pt-4 border-t border-surface-container space-y-3">
-            <Link
-              to="/book-demo"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block w-full bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-xl text-sm font-bold text-center shadow-lg active:scale-95 transition-all"
-            >
-              Book Demo
-            </Link>
-          </div>
-        </div>
-      )}
-
-      <div className="bg-slate-100 h-px w-full absolute bottom-0 opacity-20" />
-    </nav>
+      <div className="bg-[#f2f4f6] dark:bg-slate-800 h-[1px] w-full"></div>
+    </header>
   );
 }

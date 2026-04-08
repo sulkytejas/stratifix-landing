@@ -7,7 +7,7 @@ export default function DemoTestimonial() {
             Trusted by Enterprise Leaders
           </span>
           <p className="text-2xl font-headline italic leading-snug">
-            &ldquo;Stratifix has redefined how we scale our sales training.
+            &ldquo;Stratyfix has redefined how we scale our sales training.
             The emotion-aware AI provides insights our managers missed for
             years.&rdquo;
           </p>

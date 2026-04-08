@@ -1,31 +1,37 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import TrainingScenarios from "../components/TrainingScenarios";
-import Features from "../components/Features";
-import AdvancedAnalytics from "../components/AdvancedAnalytics";
-import AnalyticsEngine from "../components/AnalyticsEngine";
-import HowItWorks from "../components/HowItWorks";
-import Pricing from "../components/Pricing";
+import ImpactMetrics from "../components/ImpactMetrics";
+import CommandSuite from "../components/CommandSuite";
+import CoachingFeature from "../components/CoachingFeature";
+import SalesDNA from "../components/SalesDNA";
+import StrategicLoop from "../components/StrategicLoop";
+import TailoredEnvironments from "../components/TailoredEnvironments";
+import EnterpriseLibrary from "../components/EnterpriseLibrary";
+import BehavioralFeedback from "../components/BehavioralFeedback";
+import Infrastructure from "../components/Infrastructure";
+import FAQ from "../components/FAQ";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
-import MobileBottomNav from "../components/MobileBottomNav";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-16 md:pt-20 overflow-x-hidden">
+      <main>
         <Hero />
-        <TrainingScenarios />
-        <Features />
-        <AdvancedAnalytics />
-        <AnalyticsEngine />
-        <HowItWorks />
-        <Pricing />
+        <ImpactMetrics />
+        <CommandSuite />
+        <CoachingFeature />
+        <SalesDNA />
+        <StrategicLoop />
+        <TailoredEnvironments />
+        <EnterpriseLibrary />
+        <BehavioralFeedback />
+        <Infrastructure />
+        <FAQ />
         <CTA />
       </main>
       <Footer />
-      <MobileBottomNav />
     </>
   );
 }

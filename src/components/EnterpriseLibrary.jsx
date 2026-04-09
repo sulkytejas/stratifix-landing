@@ -32,10 +32,6 @@ export default function EnterpriseLibrary() {
               Access 30+ pre-configured strategic frameworks.
             </p>
           </div>
-          <button className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
-            View All Templates{" "}
-            <span className="material-symbols-outlined">arrow_forward</span>
-          </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {templates.map((tpl) => (

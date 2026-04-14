@@ -49,9 +49,9 @@ export default function Footer() {
             Stratyfix
           </Link>
           <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-[260px]">
-            Stratyfix is an AI coaching platform that provides measurable,
-            impactful and scalable sales coaching &amp; training for the
-            enterprise.
+            Stratyfix is an AI training platform that delivers measurable,
+            scalable coaching for every team — from sales and leadership to
+            onboarding and compliance.
           </p>
           <div className="flex gap-5">
             <a

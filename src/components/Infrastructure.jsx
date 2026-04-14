@@ -5,11 +5,11 @@ export default function Infrastructure() {
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div>
             <h2 className="text-4xl font-bold font-headline text-primary mb-8">
-              Sovereign Enterprise Infrastructure
+              Enterprise-Grade Security & Compliance
             </h2>
             <p className="text-on-surface-variant mb-10 text-lg">
-              Designed for the Indian enterprise landscape with military-grade
-              security and seamless ecosystem integration.
+              Built for organizations that take data privacy seriously.
+              Military-grade security with seamless ecosystem integration.
             </p>
             <div className="grid grid-cols-2 gap-8 mb-12">
               <div className="flex items-center gap-4">
@@ -48,11 +48,12 @@ export default function Infrastructure() {
                 hub
               </span>
             </div>
-            <h3 className="text-2xl font-bold mb-6">India-Sovereign Data</h3>
+            <h3 className="text-2xl font-bold mb-6">Your Data, Your Rules</h3>
             <p className="text-on-primary/70 mb-8 leading-relaxed">
-              Stratyfix is hosted exclusively on local infrastructure, ensuring
-              your proprietary sales narratives never leave the region. Complete
-              air-gapped options available for government and PSU sectors.
+              Stratyfix offers regional data residency options, ensuring your
+              proprietary training content and employee data stay exactly where
+              you need them. Air-gapped deployments available for regulated
+              industries.
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">

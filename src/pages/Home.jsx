@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ImpactMetrics from "../components/ImpactMetrics";
-import CommandSuite from "../components/CommandSuite";
 import CoachingFeature from "../components/CoachingFeature";
+import AnalyticsSection from "../components/AnalyticsSection";
 import SalesDNA from "../components/SalesDNA";
 import StrategicLoop from "../components/StrategicLoop";
 import TailoredEnvironments from "../components/TailoredEnvironments";
@@ -20,8 +20,8 @@ export default function Home() {
       <main>
         <Hero />
         <ImpactMetrics />
-        <CommandSuite />
         <CoachingFeature />
+        <AnalyticsSection />
         <SalesDNA />
         <StrategicLoop />
         <TailoredEnvironments />

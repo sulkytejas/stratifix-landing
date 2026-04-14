@@ -1,7 +1,7 @@
 const checkpoints = [
-  "Automated transcription of custom playbooks into AI persona behaviors.",
-  "Real-time tone analysis and sentiment matching for immersive training.",
-  "Multi-modal feedback including body language and objection handling.",
+  "Automatic scoring across communication skills like empathy, clarity, and confidence.",
+  "Real-time tone and sentiment analysis with moment-by-moment breakdowns.",
+  "Video replay with timestamped coaching moments and improvement suggestions.",
 ];
 
 export default function BehavioralFeedback() {
@@ -22,18 +22,17 @@ export default function BehavioralFeedback() {
           </div>
           <div className="order-1 lg:order-2">
             <span className="inline-block px-3 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase mb-6">
-              Holistic behavioral feedback
+              AI-Powered Behavioral Coaching
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-primary mb-6 leading-tight">
-              Let the AI sales coach provide actionable feedback and
-              recommendations
+              Every practice session ends with actionable, personalized
+              coaching
             </h2>
             <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
-              Our AI coach provides a comprehensive analysis of sales behavior,
-              including perceived warmth and competence, in the client
-              simulation. Based on audio and video analysis, it offers
-              personalized advice for improvement, helping reps experience
-              themselves through the eyes of their customers.
+              Our AI analyzes verbal and nonverbal behavior in every
+              simulation — tone, pacing, empathy, confidence, and body language.
+              Learners see themselves through the eyes of the person they're
+              speaking with and get specific, actionable tips to improve.
             </p>
             <ul className="space-y-4">
               {checkpoints.map((text) => (

@@ -4,26 +4,29 @@ export default function ImpactMetrics() {
       <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
         <div className="space-y-2">
           <div className="text-4xl font-extrabold text-tertiary-fixed font-headline tracking-tighter">
-            65%
+            40%
           </div>
           <div className="text-on-primary/70 text-sm font-medium tracking-wide">
-            FASTER RAMP-UP
+            Faster ramp-up for new hires using AI role-play
+            simulations.
           </div>
         </div>
         <div className="space-y-2">
           <div className="text-4xl font-extrabold text-tertiary-fixed font-headline tracking-tighter">
-            10x
+            12x
           </div>
           <div className="text-on-primary/70 text-sm font-medium tracking-wide">
-            SCALABLE COACHING
+            More practice conversations than traditional instructor-led
+            training.
           </div>
         </div>
         <div className="space-y-2">
           <div className="text-4xl font-extrabold text-tertiary-fixed font-headline tracking-tighter">
-            0.1s
+            20+
           </div>
           <div className="text-on-primary/70 text-sm font-medium tracking-wide">
-            REAL-TIME FEEDBACK
+            Languages supported natively for global workforce
+            consistency.
           </div>
         </div>
       </div>

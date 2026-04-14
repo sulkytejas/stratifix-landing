@@ -2,20 +2,20 @@ const steps = [
   {
     num: "01",
     icon: "target",
-    title: "Set goals",
-    desc: "Define specific deal objectives, stakeholder personas, and technical complexities of your upcoming engagement.",
+    title: "Define the scenario",
+    desc: "Set the training context — whether it's a sales negotiation, a leadership check-in, a compliance scenario, or a new-hire onboarding pitch.",
   },
   {
     num: "02",
     icon: "forum",
-    title: "Simulate",
-    desc: "Engage in high-fidelity vocal or text roleplay with AI that adapts its resistance levels based on your performance.",
+    title: "Practice with AI",
+    desc: "Engage in realistic video or voice role-play with an AI persona that adapts its tone, pushback, and complexity based on learner performance.",
   },
   {
     num: "03",
     icon: "insights",
-    title: "Advice & insights",
-    desc: "Receive instant post-action debriefs highlighting missed opportunities and refined narrative suggestions.",
+    title: "Get instant feedback",
+    desc: "Receive a detailed behavioral debrief — what went well, what to improve, and specific coaching tips personalized to the learner's performance.",
   },
 ];
 
@@ -25,10 +25,11 @@ export default function StrategicLoop() {
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold font-headline mb-4">
-            The Strategic Loop
+            How Stratyfix Works
           </h2>
           <p className="text-on-primary/60">
-            Professional growth through systematic AI interaction.
+            Three steps to measurable skill improvement — for any team, any
+            scenario.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-12">

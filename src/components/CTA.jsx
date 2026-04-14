@@ -7,19 +7,19 @@ export default function CTA() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary-container to-transparent opacity-50"></div>
         <div className="relative z-10">
           <h2 className="text-4xl md:text-6xl font-black text-white font-headline mb-8 tracking-tighter">
-            Ready to transform your <br />
-            <span className="text-tertiary-fixed-dim">sales DNA?</span>
+            Ready to train your team <br />
+            <span className="text-tertiary-fixed-dim">the smart way?</span>
           </h2>
           <p className="text-on-primary/70 text-xl max-w-2xl mx-auto mb-12">
-            Join the elite sales organizations scaling their intelligence with
-            Stratyfix AI.
+            Join hundreds of organizations using AI role-play to build
+            confident, high-performing teams.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link
               to="/book-demo"
               className="px-10 py-5 bg-tertiary-fixed text-on-tertiary-fixed font-black rounded-lg shadow-2xl hover:scale-105 transition-all text-lg"
             >
-              Book a Strategic Consultation
+              Start Free Trial
             </Link>
             <Link
               to="/pricing"
